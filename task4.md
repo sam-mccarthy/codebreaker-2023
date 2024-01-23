@@ -1,3 +1,5 @@
+# Task 4
+
 This task was, thankfully, really straightforward. I went into QEMU and looked through the file system, eventually running into `/opt`, where `mount_part` (a bash script for mounting LUKS filesystems via cryptsetup) and `part.enc` (a LUKS filesystem file) are located. I looked at `mount_part`, hacked away at cryptsetup for a bit, and eventually extracted the challenge files on my desktop to chip at `part.enc` using hashcat.
 
 After learning a bit of how hashcat is used, and playing with the settings (mostly trying to squeeze performance, since it seemed slow), I let it run overnight. To my dismay, it didn't pop, and didn't seem like it was going to.
